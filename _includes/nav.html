@@ -1,0 +1,28 @@
+<nav class="site-nav" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" class="brand-logo" href="{{ site.url }}"><i class="fa fa-home"></i> Home</a>
+    <ul class="right hide-on-med-and-down">
+      {% for my_page in site.pages %}
+        {% if my_page.title %}
+        <li><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      <li><a href="tel:+6435725034"><i class="fa fa-phone"></i> (03) 572 5034</a></li>
+      <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+      <li><div class="fb-like right" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div></li>
+    </ul>
+    <ul class="side-nav" id="nav-mobile">
+      {% for my_page in site.pages %}
+        {% if my_page.title %}
+        <li><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      <li><a href="tel:+6435725034"><i class="fa fa-phone"></i> (03) 572 5034</a></li>
+      <li><a href="tel:+642102062832"><i class="fa fa-mobile"></i> 021 020 62832</a>
+      <li><a href="mailto:leonie@argosy-cafe.co.nz"><i class="fa fa-envelope"></i> leonie@argosy-cafe.co.nz</a></li>
+      <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+      <li><a><div class="fb-like" data-href="https://www.facebook.com/Argosy-Cafe-Take-Away-374613706046227/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div></a></li>
+    </ul>
+    <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="fa fa-bars"></i></a>
+  </div>
+</nav>

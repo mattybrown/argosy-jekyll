@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.7&appId=341116582591918";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    {% include nav.html %}
+
+    <div class="parallax-container">
+      <div class="container valign-wrapper">
+        <img class="responsive-img valign logo" src="{{ "/public/logo.png" | prepend: site.baseurl | prepend: site.url }}">
+      </div>
+      <div class="parallax"><img src="http://i.imgur.com/zbAg0hQ.jpg"></div>
+    </div>
+
+    <div class="container">
+        {{ content }}
+    </div>
+
+    <div class="google-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11950.494772452297!2d173.8585517!3d-41.5124289!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4395b3d9eda33b2a!2sArgosy+Cafe+and+Takeaway!5e0!3m2!1sen!2snz!4v1469747877428" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

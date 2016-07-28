@@ -1,0 +1,25 @@
+.fb-like span{
+  margin-bottom:18px;
+}
+.parallax-container{
+  height:300px;
+  width:100%;
+  top:-1px;
+}
+.logo{
+  margin:0px auto;
+}
+.google-map{
+  position:relative;
+  padding-bottom:30%;
+  height:240px;
+  overflow:hidden;
+  iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100% !important;
+    height:100% !important;
+    pointer-events:none;
+  }
+}
